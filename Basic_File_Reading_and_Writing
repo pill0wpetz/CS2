@@ -1,0 +1,36 @@
+package salazar_j_5_readwrite;
+
+import java.io.*;
+import java.util.Scanner;
+
+/**
+*
+* @author jason
+*/
+public class Salazar_j_5_readwrite {
+
+public static void main(String[] args) throws IOException {
+//throws IOException is making an exception 
+FileWriter out = null;
+File file = new File("/home/jason/Desktop/test.txt");
+//this is assigning the origianal file
+Scanner sc = new Scanner(file);
+String text = sc.next();
+text = text.replaceAll("Alice", "Jason");
+System.out.println(text);
+
+//this writesthe changes to text1
+out = new FileWriter("/home/jason/Desktop/test1.txt");
+while (sc.hasNextLine()) {
+
+text = sc.nextLine();
+
+text = text.replaceAll("Alice", "Jason");
+System.out.println(text);
+//file is printed here
+
+out.write(text);
+}
+
+}
+}
