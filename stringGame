@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package string_game_salazar_5;
 
 import java.util.Scanner;
@@ -15,12 +10,15 @@ public class String_Game_Salazar_5 {
 
     public static void main(String[] args) {
         Scanner Play = new Scanner(System.in);
+       
 
         String Wannaplay;
+        if(Wannaplay.startsWith("Y")){
+            
+        }
         System.out.println("I will gues your future pet Please Type yes/no followed by your name ");
         Wannaplay = Play.next().toUpperCase();
 
-//        Wannaplay.replaceAll("//s", "S");
         String name = Wannaplay.substring(3);
 
         boolean letsplay = true;
@@ -29,49 +27,41 @@ public class String_Game_Salazar_5 {
 
         }
         System.out.println("See what kind of pet you resemble");
-//        System.out.println("There are 4 choices");
-//        System.out.println("Dog");
-//        System.out.println("Cat");
-//        System.out.println("Beta Fish");
-//        System.out.println("Lizard");
         
         String Maybecat;
         System.out.println("Are you lonely and antisocial?");
-        Maybecat = Play.next();
-        
-  boolean cat = true;
-        if (Wannaplay.contains("Y")) {
-            System.out.println("You would like a cat");
-        }
+        Maybecat = Play.next().toUpperCase();;
+
         String Maybedog;
         System.out.println("Are you social and like to go out?");
-        Maybedog = Play.next();
+        Maybedog = Play.next().toUpperCase();;
         
-          boolean dog = true;
-        if (Wannaplay.contains("Y")) {
-            System.out.println("You would like a dog");
-        } 
+      
         String Maybebeta;
         System.out.println("Are you self suffecient and keep to your self?");
-        Maybebeta = Play.next();
+        Maybebeta = Play.next().toUpperCase();
         
-          boolean betafish = true;
-        if (Wannaplay.contains("Y")) {
-            System.out.println("You would like a Beta Fish");
-        }else if {
-            maybesnake();
-        }
+       
          String Maybesnake;
         System.out.println("Are you judgemental and turn on others?");
-        Maybebeta = Play.next();
-          boolean snake = true;
+        Maybesnake = Play.next().toUpperCase();
+        
+          boolean answer = true;
           
-        if (Wannaplay.contains("Y")) {
+        if (Maybecat.contains("Y")) {
             System.out.println("You would like a Snake");
     }
+                if (Maybedog.contains("Y")) {
+            System.out.println("You would like a dog");
+    }
+                        if (Maybebeta.contains("Y")) {
+            System.out.println("You would like a BetaFish");
+    }
+                if (Maybesnake.contains("Y")) {
+            System.out.println("You would like a Snake");
+    }
+        
+        
+               
 }
 }
-    
-    
-
-
