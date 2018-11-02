@@ -6,67 +6,52 @@ import java.util.Scanner;
  *
  * @author jason
  */
-public class String_game_salazar_5 {
+public class String_Game_Salazar_5 {
 
-    public static  void main(String[] args) {
-        Scanner Play = new Scanner(System.in);
+    static Scanner Play = new Scanner(System.in);
 
-        String Wannaplay;
+    public static void main(String[] args) {
 
-        boolean answer = true;
+        System.out.println("I will gues your future pet Please Type yes/no ");
+        String wannaPlay = Play.next().toLowerCase();
+        if (wannaPlay.equals("yes")) {
+            System.out.println("Lets get started answer with yes or no");
+            play();
+        } else {
+            return;
+        }
+    }
 
- 
-            System.out.println("I will gues your future pet Please Type yes/no ");
-            Wannaplay = Play.next().toUpperCase();
-
-        //    String name = Wannaplay.substring(3);
-
-            if (Wannaplay.startsWith("Y")) {
-                System.out.println("Lets get started answer with yes or no");
-            }
-
-            System.out.println("See what kind of pet you resemble");
-
-            switch (Wannaplay) {
-                case "Yes":
-                    answer = false;
-                    break;
-                case "No":
-                    answer = true;
-                    break;
-                
-                    
-            }
-        
+    static void play() {
+        System.out.println("See what kind of pet you resemble");
 
         String Maybecat;
         System.out.println("Are you lonely and antisocial?");
-        Maybecat = Play.next().toUpperCase();
-
+        Maybecat = Play.next().toLowerCase();
 
         String Maybedog;
         System.out.println("Are you social and like to go out?");
-        Maybedog = Play.next().toUpperCase();
+        Maybedog = Play.next().toLowerCase();
 
         String Maybebeta;
         System.out.println("Are you self suffecient and keep to your self?");
-        Maybebeta = Play.next().toUpperCase();
+        Maybebeta = Play.next().toLowerCase();
 
         String Maybesnake;
         System.out.println("Are you judgemental and turn on others?");
-        Maybesnake = Play.next().toUpperCase();
+        Maybesnake = Play.next().toLowerCase();
 
-        if (Maybecat.contains("Y")) {
+        if (Maybecat.equals("yes")) {
             System.out.println("You would like a Snake");
         }
-        if (Maybedog.contains("Y")) {
+        if (Maybedog.equals("yes")) {
             System.out.println("You would like a dog");
         }
-        if (Maybebeta.contains("Y")) {
+        if (Maybebeta.equals("yes")) {
             System.out.println("You would like a BetaFish");
         }
-        if (Maybesnake.contains("Y")) {
+        if (Maybesnake.equals("yes")) {
             System.out.println("You would like a Snake");
         }
-}
+    }
 }
