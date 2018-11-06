@@ -6,11 +6,12 @@ import java.util.Scanner;
  *
  * @author jason
  */
-public class String_game_salazar_5 {
+public class String_Game_Salazar_5 {
 
     static Scanner Play = new Scanner(System.in);
 
     public static void main(String[] args) {
+
         System.out.println("I will gues your future pet Please Type yes/no ");
         String wannaPlay = Play.next().toLowerCase();
         if (wannaPlay.contains("y")) {
@@ -22,41 +23,70 @@ public class String_game_salazar_5 {
     }
 
     static void play() {
-        System.out.println("See what kind of pet you resemble");
+        boolean playing = true;
 
-        String Maybecat;
-        System.out.println("Are you lonely and antisocial?");
-        Maybecat = Play.next().toLowerCase();
+        while (playing) {
 
-        String Maybedog;
-        System.out.println("Are you social and like to go out?");
-        Maybedog = Play.next().toLowerCase();
+            System.out.println("See what kind of pet you resemble");
 
-        String Maybebeta;
-        System.out.println("Are you self suffecient and keep to your self?");
-        Maybebeta = Play.next().toLowerCase();
-        
-        String Maybesnake;
-        System.out.println("Are you judgemental and turn on others?");
-        Maybesnake = Play.next().toLowerCase();
-       
-        if (Maybecat.contains("y")) {
-            System.out.println("You would like a Snake");
-        }
-        if (Maybedog.contains("y")) {
-            System.out.println("You would like a dog");
-        }
-        if (Maybebeta.contains("y")) {
-            System.out.println("You would like a BetaFish");
-        }
-        if (Maybesnake.contains("y")) {
-            System.out.println("You would like a Snake");
+            String Maybecat;
+            System.out.println("Are you lonely and antisocial?");
+            Maybecat = Play.next().toLowerCase();
+
+            String Maybedog;
+            System.out.println("Are you social and like to go out?");
+            Maybedog = Play.next().toLowerCase();
+
+            String Maybebeta;
+            System.out.println("Are you self suffecient and keep to your self?");
+            Maybebeta = Play.next().toLowerCase();
+
+            String Maybesnake;
+            System.out.println("Are you judgemental and turn on others?");
+            Maybesnake = Play.next().toLowerCase();
+
+            int total = 0;
+            if (Maybecat.contains("y")) {
+                total++;
+            }
+            if (Maybedog.contains("y")) {
+                total++;
+            }
+            if (Maybebeta.contains("y")) {
+                total++;
+            }
+            if (Maybesnake.contains("y")) {
+                total++;
+
+            }
+
+            String animal = null;
+            if (total==3){
+                animal = "Snake";
+            }
+                if (total==2){
+                animal = "Beta";
+            }
+                    if (total==1){
+                animal = "Dog";
+            }
+                        if (total==3){
+                animal = "Cat";
+            }
+
+  System.out.println("You're future pet is " + animal);
+ String letsplay;
+        System.out.println("Do you want to try again?");
+        letsplay = Play.next().toLowerCase();
+        boolean playagain;
+
+        if (letsplay.contains("y")) {
+            playing = true;
+        } else if (letsplay.contains("n")) {
+            playing = false;
         }
 
-        boolean Snake;
-        if (Snake = false){
-            int s +1;
         }
-        
+      
     }
 }
